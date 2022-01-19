@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Dropdown Navigation</title>
+	<style>
+		/* Colours:
+		Dark blue: #221c38
+		Light blue: #96a1be */
+
+		/* Base font style */
+		nav {
+			font-family: Arial, sans-serif;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		.main-menu {
+			background: #221c38;
+			display: flex;
+		}
+
+		.main-menu li {
+			padding: 10px;
+			position:relative;
+		}
+
+		.main-menu li:hover .sub-menu,
+		.main-menu li:focus-within .sub-menu {
+			/* the hover- we want it on the list item so when we hover OVER THIS, we APPLY it to the .sub-menu --> after the :hover, if you include a selector afterwards, the changes will apply to whatever selector you wrote (aka, .sub-menu) */
+			height: auto;
+			padding: 10px 0;
+		}
+
+		.sub-menu {
+			background: #96a1be;
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+		}
+
+		.main-menu li a{
+			color: white;
+			text-decoration: none;
+			padding: 0 20px;
+		}
+
+		.sub-menu li a {
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+
+<header>
+	<nav>
+		<ul class="main-menu">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="work.html">Work <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>

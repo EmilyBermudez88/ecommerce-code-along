@@ -1,0 +1,110 @@
+main{
+    section{
+        margin-bottom: 90px;
+    }
+}
+
+// Popular Section
+.titleBar {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:70px;
+}
+
+.product{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.productImgContainer{
+    width:31%;
+    text-align: center;
+    img{
+        max-width:calc(100% - 48px);
+        margin:24px;
+        border-radius:5%;
+    }
+}
+
+// Play Section
+.play {
+    background-image: url(../assets/background-image.jpg);
+    // remember that we are writing the path from the STYLES.CSS file, NOT from the _sections.scss file!!! So when you type it WANTS to locate it based on _sections, but that is wrong
+    background-position: center;
+    background-size: cover;
+    min-height:90vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    .playContainer{
+        max-width:650px;
+        background-color: $solidWhite;
+        border:24px solid $secondary;
+        padding: 70px 45px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+// Categories Section
+
+.categoryGallery {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    text-align: center;
+    width:100%;
+    .items{
+        width:40%;
+        padding: 45px;
+        margin: 50px 25px 25px;
+        border-radius: 10%;
+        transition: 0.2s ease;
+        &:hover,
+        &:focus {
+            transform: scale(0.95);
+        }
+        img{
+            width:100%;
+            border-radius:10%;
+            margin-bottom:20px;
+        }
+    }
+}
+
+.itemOne {
+    background-color: $quinary;
+}
+.itemTwo{
+    background-color: $secondary;
+}
+.itemThree{
+    background-color: $tertiary;
+}
+.itemFour{
+    background-color: $quarternary;
+}
+
+// Gallery Section
+h2{
+    width:50%;
+}
+
+.gallery{
+    background-color: $tertiary;
+    padding: 90px 0;
+    margin:0;
+    .galleryItems{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        .item{
+            width: 15%;
+            img{
+                width:100%;
+            }
+        }
+    }
+}
