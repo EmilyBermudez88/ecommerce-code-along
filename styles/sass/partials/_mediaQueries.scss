@@ -9,3 +9,33 @@
 @media (max-width: 500px) {
    /* all of our styles for MOBILE devices will go within this breakpoint */
 }
+
+// SHOP PAGE
+@media (max-width:1000px) {
+    .guarantees{
+        .shopOptions{
+            justify-content: space-between;
+        }
+        .guaranteeContainer {
+            margin:0 20px 30px 20px;
+            width: calc(45% - 40px);
+        }
+    }
+}
+
+@media(max-width:800px) {
+
+}
+
+@media(max-width:500px){
+    .guarantees{
+        .shopOptions{
+            flex-direction: column;
+            align-items: center;
+        }
+        .guaranteeContainer {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+    } 
+}

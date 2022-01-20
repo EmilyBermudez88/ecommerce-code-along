@@ -334,6 +334,11 @@ p.discountedPrice {
 p.newsletterCopy {
   font-size: 0.8rem;
 }
+p.valueTitle {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
 
 ul, li, a, input {
   padding: 0;
@@ -792,7 +797,6 @@ h2 {
 .shop section {
   padding: 90px 0;
   margin: 0;
-  position: relative;
 }
 
 .inventory h2 {
@@ -818,6 +822,8 @@ h2 {
 
 .guarantees {
   background-color: #fff5f5;
+  position: relative;
+  text-align: center;
 }
 .guarantees::before {
   content: "";
@@ -849,6 +855,10 @@ h2 {
   margin: 0 15px;
 }
 
+h5 {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
 }
@@ -857,4 +867,30 @@ h2 {
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+}
+@media (max-width: 1000px) {
+  .guarantees .shopOptions {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .guarantees .guaranteeContainer {
+    margin: 0 20px 30px 20px;
+    width: calc(45% - 40px);
+  }
+}
+@media (max-width: 500px) {
+  .guarantees .shopOptions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .guarantees .guaranteeContainer {
+    width: 100%;
+    margin: 0 0 30px;
+  }
 }
