@@ -789,6 +789,66 @@ h2 {
   width: 100%;
 }
 
+.shop section {
+  padding: 90px 0;
+  margin: 0;
+  position: relative;
+}
+
+.inventory h2 {
+  text-align: center;
+  width: 100%;
+}
+.inventory .product {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.inventory .product a {
+  display: block;
+}
+.inventory .product a:hover {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+.inventory .product a:focus {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+
+.guarantees {
+  background-color: #fff5f5;
+}
+.guarantees::before {
+  content: "";
+  background-image: url(../assets/wave-3.svg);
+  background-size: 100% 60px;
+  height: 3rem;
+  position: absolute;
+  background-position: top center;
+  top: -40px;
+  background-color: #fff5f5;
+  left: 0;
+  right: 0;
+}
+
+.shopOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.guaranteeContainer {
+  width: calc(25% - 30px);
+  margin: 0 15px;
+}
+
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
 }
