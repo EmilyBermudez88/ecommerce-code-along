@@ -1,0 +1,74 @@
+// the header from the contact page will be in the HEADER partial (not here!)
+
+.mapFormContainer {
+    display:flex;
+    .map {
+        width:50%;
+        iframe {
+            width:100%;
+        }
+    }
+}
+
+.contactForm {
+    width:calc(50% - 70px);
+    // just to account for no spillover from margin-left
+    display:flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+input,textarea{
+    padding: 0 0 10px 5px;
+    margin-bottom:40px;
+    font-family:$bodyFont;
+    &::placeholder {
+        color: $primary;
+        opacity:1;
+        text-transform: uppercase;
+        font-size:0.8rem;
+        line-height: 1.2rem;
+    }
+    &:focus {
+        outline:none;
+        border-bottom: 2px solid $primary;
+        // so when people tab in, they can see what part of the form is selected (trying to style it nicer than the aggressive blue which is the auto setting
+    }
+}
+
+input{
+    border:none;
+    border-bottom: 1px solid #eee;
+}
+
+textarea {
+    border:none;
+    border-bottom:1px solid #eee;
+    min-height:  130px;
+}
+
+select{
+    appearance:none;
+    // this helps get rid of some default styling
+    color:$primary;
+    border:none;
+    background-color: $solidWhite;
+    border-bottom: 1px solid #eee;
+    margin-bottom:40px;
+    padding-bottom: 10px;
+    width:100%;
+    font-family:$bodyFont;
+    font-size:0.8rem;
+    line-height:1.2rem;
+    text-transform: uppercase;
+    background-image: url(../assets/caret-down-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size:20px;
+}
+
+option{
+    font-family:sans-serif;
+    // options are incredibly hard to style and won't take the body font you want, so you have to just use serif or sans-serif
+
+}

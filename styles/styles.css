@@ -578,82 +578,33 @@ header .headerContent .contentContainer {
   margin: 0 auto;
 }
 
-footer {
-  background-color: #084b6d;
-  color: #fff;
-  padding: 90px 0 50px 0;
-}
-footer .footerFlexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 90px;
-}
-footer .footerFlexContainer h4 {
-  color: #fff;
-}
-footer .newsletter {
-  width: calc(40% - 50px);
-  margin-right: 50px;
-}
-footer .newsletter form {
+.contactHeader {
+  background-color: #fff5f5;
+  padding-top: 120px;
   position: relative;
-  margin-bottom: 20px;
 }
-footer .newsletter input {
-  color: #fff;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0;
-  height: 60px;
+.contactHeader .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contactHeader::after {
+  content: "";
+  background-image: url(../assets/wave.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+  height: 150px;
   width: 100%;
-}
-footer .newsletter .secondary {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-footer .footerNav {
-  width: 40%;
-}
-footer .footerNav nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-footer .footerNav nav ul {
-  width: 33%;
-}
-footer .footerNav nav a {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-}
-footer .footerNav nav a:hover, footer .footerNav nav a:focus {
-  color: #fff;
-}
-footer .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-footer .social i {
-  font-size: 1.2rem;
-  margin: 0 10px;
-}
-footer .social i:hover, footer .social i:focus {
-  color: #ffd698;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
 main section {
@@ -857,6 +808,189 @@ h2 {
 
 h5 {
   margin-bottom: 30px;
+}
+
+.mapFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mapFormContainer .map {
+  width: 50%;
+}
+.mapFormContainer .map iframe {
+  width: 100%;
+}
+
+.contactForm {
+  width: calc(50% - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 70px;
+}
+
+input, textarea {
+  padding: 0 0 10px 5px;
+  margin-bottom: 40px;
+  font-family: "Jakarta Sans";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #084b6d;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #084b6d;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #084b6d;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #084b6d;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+input::placeholder, textarea::placeholder {
+  color: #084b6d;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #084b6d;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid #eee;
+  min-height: 130px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #084b6d;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  width: 100%;
+  font-family: "Jakarta Sans";
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 20px;
+}
+
+option {
+  font-family: sans-serif;
+}
+
+footer {
+  background-color: #084b6d;
+  color: #fff;
+  padding: 90px 0 50px 0;
+}
+footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footerFlexContainer h4 {
+  color: #fff;
+}
+footer .newsletter {
+  width: calc(40% - 50px);
+  margin-right: 50px;
+}
+footer .newsletter form {
+  position: relative;
+  margin-bottom: 20px;
+}
+footer .newsletter input {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  height: 60px;
+  width: 100%;
+}
+footer .newsletter .secondary {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+footer .footerNav {
+  width: 40%;
+}
+footer .footerNav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footerNav nav ul {
+  width: 33%;
+}
+footer .footerNav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footerNav nav a:hover, footer .footerNav nav a:focus {
+  color: #fff;
+}
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .social i {
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+footer .social i:hover, footer .social i:focus {
+  color: #ffd698;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media (max-width: 1000px) {
